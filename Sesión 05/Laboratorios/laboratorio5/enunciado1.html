@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    
+        <label>INGRESE SU NOMBRE: </label><input type="text" id="txtNombre" name="txtNombre" >
+        <button id="btnComprarCelular" >COMPRAR CELULAR</button>
+        <div id="datoscelular">
+        </div>
+        <script type="text/javascript" src="jquery/js/jquery-3.7.0.min.js"></script>
+        <script type="text/javascript" src="js/enunciado1.js"></script>
+        <script type="text/javascript">
+            //Selecionando el elemento usando DOM y JS normal
+            //document.getElementById("btnComprarCelular")
+            //Seleccionando el elemento usando DOM y Jquery (Para seleccionar un elemento HTML puedo utilizar los mismo selectores que utiliazamos en CSS)
+            //$("#btnComprarCelular")
+
+            function comprarCelular(){
+                var celular1=new celular("VERDE","150GR","16gb","IPHONE", "150*1200",false);
+                celular1.presionarBotonEncendido();
+                var nombre= $("#txtNombre").val();
+                $("#datoscelular").html("El usuario "+nombre+" compro el celular con las siguientes caracteristicas: <br>"+celular1.infoCelular());
+            }
+
+            $("#btnComprarCelular").click(function() {
+                comprarCelular();
+            });
+
+
+            var celular2= new celular();
+            celular2.color="NEGRO";
+            celular2.marca="SANSUNG"
+            celular2.encendido=false;
+            celular2.presionarBotonEncendido();
+        </script>
+    </body>
+</html>

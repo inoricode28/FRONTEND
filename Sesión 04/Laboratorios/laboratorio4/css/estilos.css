@@ -1,0 +1,21 @@
+#formularioNombre{
+    border: 1px solid red;
+    width: 250px;
+    margin: auto;
+}
+body{
+    align-content: center;
+}
+h1{
+    text-align: center;
+    margin: auto;
+}
+table button{
+    display: block;
+    margin: 0 auto;
+}
+
+table{
+    display: block;
+    margin: 0 auto;
+}

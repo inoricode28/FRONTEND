@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <form id="formularioNombre" action="#">
+            <table>
+                <tr>
+                    <td><label for="name"><b>Name:</b></label></td>
+                    <td><input type="text" id="name" onkeyup="saludarConsola()"></td>
+                </tr>
+                <tr>
+                    <td><label for="name"><b>Tipo:</b></label></td>
+                    <td>
+                        <select id="cboTipo" onchange="alert('CAMBIO DE TIPO')">
+                            <option value="Sopa">Sopa</option>
+                            <option value="Arroz">Arroz</option>
+                            <option value="Fideos">Fideos</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="saludar()">ENVIAR DATOS</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="btnSaludar">SALUDAR</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="btnSaludar2">SALUDAR2</button></td>
+                </tr>
+            </table>
+        </form>
+        <script type="text/javascript" src="js/acciones.js"></script>
+    </body>
+</html>

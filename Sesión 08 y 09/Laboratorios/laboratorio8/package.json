@@ -1,0 +1,14 @@
+{
+  "name": "laboratorio-08",
+  "version": "1.0.0",
+  "description": "proyecto",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "jperezgil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

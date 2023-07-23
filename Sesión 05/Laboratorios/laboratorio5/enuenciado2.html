@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="#" onclick="return validarFormulario();"> 		
+            <label for="txtNombre">Nombre</label><br>
+            <input type="text" id="txtNombre" ><br><br>        
+            <label for="txtApellido">Apellido</label><br>
+            <input type="text" id="txtApellido" ><br><br>        
+            <label for="txtTelefono">Telefono</label><br>
+            <input type="text" id="txtTelefono"><br><br>        
+            <label for="txtEmail">Email</label><br>
+            <input type="text" id="txtEmail"><br><br>             
+            <button type="submit" >Guardar</button>        
+        </form>
+        
+        <script type="text/javascript" src="jquery/js/jquery-3.7.0.min.js"></script>
+        <script type="text/javascript">
+            function validarFormulario(){
+                var nombre = $("#txtNombre").val();
+                var apellido = $("#txtApellido").val();
+                var telefono = $("#txtTelefono").val();
+                var email = $("#txtEmail").val();
+                var mensaje="Estimado usuario por favor: ";
+                var validar=true;
+                if(nombre==""){
+                    mensaje=mensaje+" -Ingrese un nombre";
+                    $("#txtNombre").css({'border':'1px solid red'})
+                    validar=false;
+                }
+                if(apellido==""){
+                    mensaje=mensaje+" -Ingrese un apellido";
+                    $("#txtApellido").css({'border':'1px solid red'})
+                    validar=false;
+                }
+                if(telefono==""){
+                    mensaje=mensaje+" -Ingrese un telefono";
+                    $("#txtTelefono").css({'border':'1px solid red'})
+                    validar=false;
+                }
+                if(email==""){
+                    mensaje=mensaje+" -Ingrese un email";
+                    $("#txtEmail").css({'border':'1px solid red'})
+                    validar=false;
+                }
+                
+                if(validar==true){
+                    alert("Datos ingresados correctamente");
+                }else{
+                    alert(mensaje);
+                }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 2;
+}
+
+p{
+    background-color: black;
+    color:white;
+}
+.cuento{
+    text-align: center;
+}
+#base{
+    font-size:30px;
+    font-family:sans-serif;
+}
+
+
+p.cuento{
+  border: 5px solid rgba(26, 103, 192, 0.628);
+}
+
+p:hover{
+    background-color: rgb(79, 81, 83)
+}
+
+.cuento div{
+    background-color: rgb(105, 54, 36)
+}
+
+div :is(h1, nav){ /* Selecciona los elementos h1 y nav que estan dentro de un div */
+ 	 font-size:30px;
+	 color:red;
+}
+
+div:has(h2) { /* Selecciona los div que contengan un h2 */
+      background-color: yellow;
+}
+
+div:not(h2) {/* Selecciona los div que no contengan un h2 */
+      background-color: yellow;
+}
+
+p.cuento::first-letter{
+    font-size:30px;
+    color:red;
+}
+/* Comentario 
+:hover{
+   background-color: rgba(255, 43, 43, 0.89)
+}
+p{
+    color:red;
+}
+div{
+    color:red;
+}
+
+// Tambien se puede utilizar el is para los siguientes casos
+
+p,div{
+    color:red;
+}
+
+p.cuento{
+    color:red;
+}
+div.cuento{
+    color:red;
+}
+
+.cuento:is(p,div){
+    color:red;
+}
+*/

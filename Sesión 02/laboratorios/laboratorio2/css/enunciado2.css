@@ -1,0 +1,92 @@
+* {/* Con esto se selecciona todos los elementos documento HTML, ósea, es como un selector global*/
+	user-select: none; /* Esto permite que el usuario no seleccione el elemento */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.Formulario{
+	background: #333333; /* Se usa el Hexadecimal para asignarle color*/
+	width: 550px;
+	height: 365px;
+}
+
+h3{ /* Como es el único h3 que hay en la página, no habrá ningún conflicto */
+
+	color: white;
+	text-align: center; /* Alinea el texto al centro */
+	padding-top: 20px;
+}
+
+.Formulario input { /* Seleccionamos a todos los Inputs hijo del contenedor*/
+
+	width: 40%; /* Tendrá un ancho que ocupará solo el 40% del contenedor */
+	height: 30px; /* Tendrá un alto de 30px */
+	
+   /* Redondea las esquinas del borde exterior de un elemento*/
+	border-radius: 8px; 
+
+	padding: 5px; /* Rellenamos 5px hacia los lados */
+	margin-top: 12px; /* Le damos un espacio o margen de 12px hacia arriba */
+	
+	/* Le damos un espacio o margen de 27px hacia la izquierda*/
+    margin-left: 27px; 
+
+	border: none; /* Quitamos los bordes */
+
+	/* Después le agregamos solo el borde de abajo */
+	/* Es otra forma de dar color a un elemento, con el RGB */
+	border-bottom: 3px solid rgb(17, 204 , 119); 
+		
+	background: transparent; /* Desaparecemos el color de fondo */
+	color: white; /* Cambiamos el color de las letras al ingresar, en blanco */
+	font-size: 15px; /* Le asignamos al tamaño del texto 15px */
+}
+
+.Formulario input:focus { /* Esta pseudo clase ejecuta una acción al hacer click al input, es decir, cuando el foco este en el input*/
+	outline: none; /*Eliminamos el contorno del input*/
+	border: 3px solid #5f9; /*Agrega un borde de color verde*/
+}
+
+.Formulario input:hover { /* Esta pseudo clase ejecuta al pasar el puntero sobre el input*/
+	background: azure; /*Agrega un fondo de color verde*/
+}
+
+.Formulario__Button {
+
+	/* Especifican el desplazamiento desde los bordes del contenedor */
+	position: absolute; 
+
+	/* Las posiciones top, left, bottom y right solo funcionan cuando se usan los position */
+	left: 810px;
+	top: 325px;
+
+	width: 4cm; /* Le asignamos un ancho de 4cm o 4 centímetros */
+	height: 1cm; /* Le asignamos un alto de 1cm o 1 centímetros */
+	color: white;
+	background: #1c7; /* Este también es una forma del hexadecimal */
+	border: none;
+	border-radius: 6px;
+	
+	/* Al colocar el puntero encima del button, este puntero cambiara de tipo */
+	cursor: pointer; 
+}
+
+.Imagen {
+	width: 200px;
+	height: 200px;
+	
+	/* Con esto obtenemos la imagen usando la dirección en donde esta almacenado tu imagen */
+	background-image: url("/img/persona.png"); 
+	background-repeat: no-repeat;/* Hacemos que no se repita las imagenes */
+
+	/* Le damos un tamaño al fondo, en nuestro caso, a la imagen */
+	background-size: 200px;
+	position: absolute;
+	top: 105px;
+	left: 810px;
+}
+
+
